@@ -1,0 +1,67 @@
+SATELLITE:~$ docker ps -a
+CONTAINER ID   IMAGE         COMMAND    CREATED          STATUS                      PORTS     NAMES
+49d238e838d3   hello-world   "/hello"   5 minutes ago    Exited (0) 5 minutes ago              practical_davinci
+f995c0419a0a   hello-world   "/hello"   39 minutes ago   Exited (0) 39 minutes ago             stupefied_booth
+14bc9cebb0a7   hello-world   "/hello"   43 minutes ago   Exited (0) 43 minutes ago             flamboyant_beaver
+9bf20cc49cdf   hello-world   "/hello"   48 minutes ago   Exited (0) 48 minutes ago             goofy_turing
+SATELLITE:~$ docker run --name greeter hello-world
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+SATELLITE:~$ docker ps -a
+CONTAINER ID   IMAGE         COMMAND    CREATED          STATUS                      PORTS     NAMES
+ab672242542f   hello-world   "/hello"   8 seconds ago    Exited (0) 4 seconds ago              greeter
+49d238e838d3   hello-world   "/hello"   10 minutes ago   Exited (0) 10 minutes ago             practical_davinci
+f995c0419a0a   hello-world   "/hello"   45 minutes ago   Exited (0) 44 minutes ago             stupefied_booth
+14bc9cebb0a7   hello-world   "/hello"   48 minutes ago   Exited (0) 48 minutes ago             flamboyant_beaver
+9bf20cc49cdf   hello-world   "/hello"   53 minutes ago   Exited (0) 53 minutes ago             goofy_turing
+SATELLITE:~$ $ docker container run hello-world
+$: command not found
+SATELLITE:~$ docker container run hello-world
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+SATELLITE:~$ docker image pull hello-world
+Using default tag: latest
+latest: Pulling from library/hello-world
+Digest: sha256:cf1b20a0c89a666b6950fecda7ccbc1b1a86520e7c53f908f3a21e79d0d60458
+Status: Image is up to date for hello-world:latest
+docker.io/library/hello-world:latest

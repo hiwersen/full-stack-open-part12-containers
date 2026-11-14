@@ -1,0 +1,10 @@
+SATELLITE:~/Desktop/fs-containers$ docker start -i dab9c488afe4
+root@dab9c488afe4:/# which nano
+/usr/bin/nano
+root@dab9c488afe4:/# nano --version
+ GNU nano, version 8.7.1
+ (C) 2026 the Free Software Foundation and various contributors
+ Compiled options: --disable-libmagic --enable-utf8
+root@dab9c488afe4:/# nano usr/src/app/index.js
+root@dab9c488afe4:/# 
+
